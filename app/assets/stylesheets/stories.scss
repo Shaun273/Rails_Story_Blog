@@ -1,0 +1,162 @@
+// Place all the styles related to the Stories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.body-div {
+  // background: url("blog-background.jpg") no-repeat;
+  // background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.body-div:before {
+  animation: fadein 2s ease-out forwards;
+
+  background: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,.8)),
+              url("blog-background.jpg") no-repeat bottom;
+  background-size: cover;
+  content: "";
+  position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+// a {
+//   color: #000;
+//
+//   &:visited {
+//     color: #666;
+//   }
+//
+//   &:hover {
+//     color: #fff;
+//     background-color: #000;
+//   }
+// }
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px -7px 0;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+label {
+  display: block;
+}
+
+// .navbar {
+//   display: inline-block;
+//   position: fixed;
+//   top: 0;
+//
+//   a {
+//     margin: 0;
+//     border: 1px black solid;
+//     padding:20px;
+//     text-align: center;
+//
+//   }
+// }
+
+.footer {
+  position : fixed;
+  bottom: 0;
+}
+
+@keyframes fadein {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity :100%;
+  }
+};
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  // background: blue;
+}
+
+.content-container {
+  width:80%;
+  margin: 0px 0 0 0;
+  padding: 2%;
+}
+
+
+// nav shadow
+
+.effect6 {
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect6:before, .effect6:after
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect6:after
+{
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
