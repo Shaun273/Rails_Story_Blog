@@ -14,7 +14,7 @@ class StoriesController < ApplicationController
 
   def create
     story_data = params.require(:story).permit(:title, :body, :author)
-    @story = Story.new
+    @story = Story.new(story_data)
     @story.save
     redirect_to @story
   end
@@ -31,6 +31,6 @@ class StoriesController < ApplicationController
   def destroy
     @story = Story.find(params[:id])
     @story.destroy
-    redirect_to storys_path
+    redirect_to stories_path
   end
 end
