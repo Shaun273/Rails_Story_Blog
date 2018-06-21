@@ -10,5 +10,16 @@
   <%= @story.body %>
 </p>
 
-<%= link_to 'Edit', edit_story_path(@story) %> |
-<%= link_to 'Back', stories_path %>
+<%= link_to 'Edit', edit_story_path(@story), class: "btn btn-default " %> |
+<%= link_to 'Delete', @story, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default " %> |
+<%= link_to 'Back', stories_path, class: "btn btn-default " %>
+<hr>
+
+<h3>Comments Section</h3>
+<hr>
+
+<%= render partial: "comments/comment", collection: @story.comments, as: :comment %>
+
+<h3>Add Comment</h3>
+<hr>
+<%= render partial: "comments/form", locals: {comment: @story.comments.new} %>

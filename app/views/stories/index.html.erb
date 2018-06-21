@@ -3,18 +3,21 @@
 <h1>Stories</h1>
 
 
-
+<button class="btn" type="button" name="button"><a href=""><%= link_to 'New Story', new_story_path %></a></button>
+<hr>
 
 <% @stories.each do |story| %>
-  <%= story.title %>
-  <%= story.body[0..20] %>
-  <%= link_to 'Show', story %>
-  <%= link_to 'Edit', edit_story_path(story) %>
-  <%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <h3><%= story.title %></h3>
+  <p><%= story.body[0..60]+"..." %></p>
+  <button class="btn" type="button" name="button"><a href=""><%= link_to 'Read', story, class: "" %></a></button>
+  <button class="btn" type="button" name="button"><a href=""><%= link_to 'Edit', edit_story_path(story) %></a></button>
+  <button class="btn btn-danger" type="button" name="button"><a href=""><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></a></button>
+
+
 <hr>
 <% end %>
-  
+
 
 <br>
 
-<%= link_to 'New Story', new_story_path %>
+<button class="btn" type="button" name="button"><a href=""><%= link_to 'New Story', new_story_path %></a></button>

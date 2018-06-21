@@ -1,0 +1,6 @@
+<p>
+<strong><%= comment.name %>: </strong>
+<%= comment.content %>
+<%= link_to "Edit", edit_story_comment_path(@story,comment) %>
+<%= link_to "Delete", [@story, comment], method: :delete %>
+</p>

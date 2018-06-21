@@ -7,8 +7,36 @@
   // background-size: cover;
   height: 100%;
   width: 100%;
-  p, h1, label, span {
+
+  p, h1, h2, h3, h4, h5, h6, label, span {
     color: white;
+
+  }
+  hr {
+    background-color: white;
+  }
+  a {
+    text-decoration: none;
+
+  }
+  .btn {
+    background: #ff4a42;
+    color: white;
+    margin: 10px;
+    a {
+      color: white;
+    }
+    &:hover {
+      background-color: black;
+    }
+  }
+}
+
+.nav-item, .navbar-brand {
+  height: 100%;
+  &:hover {
+    // background: rgba(200,200,200,0.6);
+    text-shadow: 0 0 30px rgba(200,200,200,1);
   }
 }
 
@@ -29,7 +57,7 @@ body {
   background-size: cover;
 
   content: "";
-  position: absolute;
+  position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
@@ -128,8 +156,11 @@ body {
 
 .content-container {
   width:80%;
-  margin: 0px 0 0 0;
+  margin: 0px 10% 0 10%;
   padding: 2%;
+  p, h1, h3, label, span {
+    color: white;
+  }
 }
 
 
@@ -165,4 +196,26 @@ body {
         -ms-transform:skew(8deg) rotate(3deg);
          -o-transform:skew(8deg) rotate(3deg);
             transform:skew(8deg) rotate(3deg);
+}
+
+// ----------------------------------------------
+//  Form
+
+.field {
+  margin: 10px;
+  label {
+    font-size: 20px;
+  }
+  input {
+
+  }
+  textarea {
+
+  }
+}
+.actions {
+  margin: 0px;
+  input {
+
+  }
 }

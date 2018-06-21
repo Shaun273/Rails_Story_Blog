@@ -6,11 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-8.times do
-  Story.create({
-    title: Faker::Book.title,
-    body: Faker::Lorem.paragraph,
-    author: Faker::Name.name_with_middle
+# 8.times do
+#   Story.create({
+#     title: Faker::Book.title,
+#     body: Faker::Lorem.paragraph,
+#     author: Faker::Name.name_with_middle
+#
+#   })
+# end
 
-  })
-end
+# 8.times do
+#   Comment.create({
+#
+#     name: Faker::LordOfTheRings.character,
+#     content:
+#
+#   })
+# end
