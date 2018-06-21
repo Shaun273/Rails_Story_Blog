@@ -8,6 +8,8 @@ In order to set up the site:
 
 * Open the console/terminal and change directory into the download location.
 
+* Use the console and run the command: bundle
+
 * Use the console and run the command: rails db:create
   * Use the console and run the command: rails db:migrate
 
